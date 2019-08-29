@@ -15,7 +15,14 @@ export default props => {
         <FontAwesomeIcon icon={faAlignLeft}/>
       </Button>
       <NavbarToggler onClick={toggle} />
-      
+      <Collapse isOpen={isOpen} navbar>
+        <Nav className="ml-auto" navbar>
+          <NavItem>
+            <div>Bem Vindo ao sistema de gerenciamento de clientes</div>
+          </NavItem>
+         
+      </Nav>
+      </Collapse>
     </Navbar>
   );
 }

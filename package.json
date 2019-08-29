@@ -1,8 +1,8 @@
 {
-  "name": "reactstrap-sidebare",
+  "name": "gerenciamento-clientes",
   "version": "0.1.0",
-  "description": "A Simple SideBar Navigation written in React",
-  "author": "Boukrouh Bilal",
+  "description": "Dashboard de gerenciamento simples de clientes - POC para entrevista",
+  "author": "Amanda Natallie",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",

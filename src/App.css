@@ -9,6 +9,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
+   
 }
 
 
@@ -20,13 +21,15 @@ a:focus {
     transition: all 0.3s;
 }
 
-
+.align-text-right {
+  text-align: right
+}
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
 .content {
   padding: 20px;
-  margin-left: 0;
+  margin-left:250px;
   height: 100vh;
 }
 
