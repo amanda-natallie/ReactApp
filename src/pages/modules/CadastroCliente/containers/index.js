@@ -12,15 +12,16 @@ class CadastroCliente extends Component {
 
   render() {
     const {data} = this.props
-
     return (
-      <div className="row">
-
+      <div>
+        <div className="row">
           <Form onSubmit={this.handleSubmit} />
-          <div className="clearfix"></div>
-          <div>Dados do Formulário: {data ? JSON.stringify(data) : null}</div>
-
       </div>
+      <div className="row">
+        <div> {data ? JSON.stringify(data) : null}</div>
+      </div>
+      </div>
+      
     )
   }
 }

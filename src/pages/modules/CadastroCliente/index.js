@@ -1,8 +1,8 @@
-const CONTACT_SENT = 'modules/CadastroCliente/SENT'
+const CLIENT_ADDED = 'modules/CadastroCliente/SENT'
 
 export const CadastroEnviado = values => {
   return {
-    type: CONTACT_SENT,
+    type: CLIENT_ADDED,
     payload: values
   }
 }
@@ -13,7 +13,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case CONTACT_SENT:
+    case CLIENT_ADDED:
       return {
         ...state,
         data: action.payload

@@ -1,22 +1,26 @@
 import React from 'react'
 import {Field, reduxForm} from 'redux-form'
+import { Col, Form, FormGroup, Label, Input, Button} from 'reactstrap';
 
-const Form = props => {
+const FormCadastro = props => {
   const {handleSubmit, pristine, reset, submitting} = props
   return (
-    <form onSubmit={handleSubmit} className="CadastroCliente-form">
-      <div className="form-group col-md-6 no-padding ">
-
-        <Field
+    <Form onSubmit={handleSubmit} className="form">
+      <Col>
+      <FormGroup>
+      <Label>Digite seu nome:</Label>
+      <Field 
           name="name"
           component="input"
           type="text"
           placeholder="Nome"
           className="form-control padding-right"
         />
-      </div>
-      <div className="form-group col-md-6 no-padding">
-
+      </FormGroup>
+      </Col>
+      <Col>
+        <FormGroup>
+        <Label> Digite seu Sobrenome</Label>
         <Field
           name="lastname"
           component="input"
@@ -24,19 +28,23 @@ const Form = props => {
           placeholder="Sobrenome"
           className="form-control"
         />
-      </div>
-      <div className="form-group col-md-6 no-padding ">
-
+        </FormGroup>
+      </Col>
+      <Col>
+        <FormGroup>
+        <Label> Digite seu </Label>
         <Field
           name="subject"
           component="input"
           type="text"
           placeholder="Assunto"
-          className="form-control  padding-right"
+          className="form-control padding-right"
         />
-      </div>
-      <div className="form-group col-md-6 no-padding">
-
+       </FormGroup>
+      </Col>
+      <Col>
+        <FormGroup>
+        <Label> Digite seu Sobrenome</Label>
         <Field
           name="email"
           component="input"
@@ -44,11 +52,14 @@ const Form = props => {
           placeholder="E-mail"
           className="form-control"
         />
-      </div>
-      <div className="form-group col-md-12 no-padding ">
-
+      </FormGroup>
+      </Col>
+      <Col>
+        <FormGroup>
+        <Label> Digite seu Sobrenome</Label>
         <Field name="texto" component="textarea" className="form-control" placeholder="Texto" />
-      </div>
+        </FormGroup>
+      </Col>
       <div className="clearfix"></div>
       <div className="form-group pull-right">
         <button
@@ -65,10 +76,10 @@ const Form = props => {
           Resetar
         </button>
       </div>
-    </form>
+    </Form>
   )
 }
 
 export default reduxForm({
   form: 'CadastroClienteForm'
-})(Form)
+})(FormCadastro)
