@@ -61,3 +61,4 @@ a:focus {
 }
 
 .scroll-y {max-height:calc(100vh - 150px); overflow-y:scroll}
+.list-group-item:hover {cursor: pointer;}
