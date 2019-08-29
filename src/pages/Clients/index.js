@@ -223,11 +223,14 @@ const clientes = [{
 export default class Clients extends Component {
   render() {
     return (
-      <Container className="py-4">
-        {Object.keys(clientes).map((key, index) =>
-          <ListGroupCollapse key={index} cat={clientes[key]} />
-        )}
-      </Container>
+        <div className="scroll-y">
+            <Container>
+                {Object.keys(clientes).map((key, index) =>
+                <ListGroupCollapse key={index} cat={clientes[key]} />
+                )}
+            </Container>
+        </div>
+      
     );
   }
 }
