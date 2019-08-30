@@ -4,7 +4,7 @@
 .sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background: #2E2D39;
     color: #fff;
     margin-left: -250px;
     transition: all 0.5s;
@@ -17,17 +17,21 @@
   
   
   .sidebar-header {
-    background: #6d7fcc;
+    background: #201F2B;
+    text-align: center;
+    margin-bottom: 30px
   }
   
   .sidebar-header a{
     color: #fff;
     padding: 1em;
+    
   }
   
   .sidebar ul p {
       color: #fff;
       padding: 10px;
+     
   }
   
   .menu-open {
@@ -61,7 +65,6 @@
   }
   .side-menu {
     height: calc(100vh - 130px);
-    overflow-y: scroll;
   }
   
   .side-menu::-webkit-scrollbar {
@@ -77,3 +80,37 @@
     background: #3A4C99; 
   }
   
+.nav-item {
+  padding: 0px;
+  margin: 0 ;
+  width: 100%;
+}
+.nav-item a {
+  width: 100%;
+  padding: 15px 15px;
+    height: 100%;
+    float: left;
+    font-size: 14px
+  }
+.nav-link-active {
+    background: #17A2B8;
+  }
+
+  .nav-link-active:after{
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 22px 10px 22px 0;
+    border-color: transparent #FAFAFA transparent transparent !important;
+}
+  
+
+  .nav-item a:hover, .nav-item:hover {
+    background: #17A2B8;
+    color: #fff
+  }

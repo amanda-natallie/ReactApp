@@ -5,7 +5,10 @@
 }
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
@@ -62,3 +65,4 @@ a:focus {
 
 .scroll-y {max-height:calc(100vh - 150px); overflow-y:scroll}
 .list-group-item:hover {cursor: pointer;}
+

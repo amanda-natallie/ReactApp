@@ -10,17 +10,16 @@ export default props => {
   const toggle = () => setOpen(!isOpen)
   
   return (
-    <Navbar color="light" light className="navbar shadow-sm p-3 mb-5 bg-white rounded" expand="md">
+    <Navbar color="light" light className="navbar shadow-sm p-4 mb-5 bg-white" expand="md">
       <Button color="info" onClick={props.toggle}>
         <FontAwesomeIcon icon={faAlignLeft}/>
       </Button>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
-          <NavItem>
+          
             <div>Bem Vindo ao sistema de gerenciamento de clientes</div>
-          </NavItem>
-         
+          
       </Nav>
       </Collapse>
     </Navbar>
