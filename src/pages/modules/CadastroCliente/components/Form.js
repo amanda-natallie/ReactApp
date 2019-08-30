@@ -156,13 +156,22 @@ const FormCadastro = props => {
                   </>
                 )}
                 <Col>
-                  <button
-                    type={step < 2 ? "button" : "submit"}
-                    className="btn btn-info"
-                    onClick={() => step < 2 && setStep(step + 1)}
-                  >
-                    {step < 2 ? "Próximo" : "Enviar"}
+                  <div className="buttonGroup">
+                    <button type="button" disabled={step === 0}
+                      className="btn btn-info pull-left"
+                      onClick={() => setStep(step - 1)}
+                    >
+                      Voltar
                   </button>
+                    <button
+                      type={step < 2 ? "button" : "submit"}
+                      className="btn btn-info pull-right"
+                      onClick={() => step < 2 && setStep(step + 1)}
+                    >
+                      {step < 2 ? "Próximo" : "Enviar"}
+                    </button>
+                  </div>
+
                 </Col>
               </Form>
             </div>
