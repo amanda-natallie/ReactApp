@@ -1,0 +1,20 @@
+*{
+    transition: all 0.3 ease
+}
+svg {
+    color: #78d4e2
+}
+.collapseWrapper {
+    padding: 10px 30px
+}
+.collapseWrapper svg {
+    color: #ccc;
+    transition: all 0.3s ease;
+}
+.rotate-down {
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}

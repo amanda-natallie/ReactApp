@@ -59,7 +59,7 @@ const FormCadastro = props => {
                           name="name"
                           component="input"
                           type="text"
-                          placeholder="Vinicius"
+                          placeholder="Amanda Natallie"
                           className="form-control padding-right"
                         />
                         <FontAwesomeIcon icon={faUser} className="mr-2"/>
@@ -72,7 +72,7 @@ const FormCadastro = props => {
                           name="lastname"
                           component="input"
                           type="text"
-                          placeholder="Colares"
+                          placeholder="de Oliveira"
                           className="form-control"
                         />
                         <FontAwesomeIcon icon={faUser} className="mr-2"/>
@@ -85,7 +85,7 @@ const FormCadastro = props => {
                           name="email"
                           component="input"
                           type="email"
-                          placeholder="talentos@viniciuscolares.com"
+                          placeholder="amanda.natallie@hotmail.com"
                           className="form-control"
                         />
                         <FontAwesomeIcon icon={faEnvelope} className="mr-2"/>
@@ -98,7 +98,7 @@ const FormCadastro = props => {
                           name="telefone"
                           component="input"
                           type="text"
-                          placeholder="(79) 9 9976 4538"
+                          placeholder="(31) 9 9976 4538"
                           className="form-control padding-right"
                           {...phoneMask}
                         />
