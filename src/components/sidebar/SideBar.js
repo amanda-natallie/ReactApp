@@ -15,7 +15,18 @@ const SideBar = props => (
         <NavbarBrand href="/">Dashboard</NavbarBrand>
       </div>
       <div className="side-menu">
+      <div className="logo-wrapper sn-ad-avatar-wrapper">
+          <a href="#!">
+            <img alt="" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" className="rounded-circle" />
+            <span>Amanda Natallie</span>
+          </a>
+        </div>
         <Nav vertical className="list-unstyled pb-3">
+        <NavItem>
+            <NavLink tag={Link} to={'/home'} activeClassName="nav-link-active">
+            <FontAwesomeIcon icon={faHome} className="mr-2"/>Página Inicial
+            </NavLink>
+          </NavItem>
           <NavItem>
             <NavLink tag={Link} to={'/add-client'} activeClassName="nav-link-active">
             <FontAwesomeIcon icon={faPlusSquare} className="mr-2"/>Cadastrar Cliente

@@ -90,7 +90,9 @@
   padding: 15px 15px;
     height: 100%;
     float: left;
-    font-size: 14px
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
   }
 .nav-link-active {
     background: #17A2B8;
@@ -114,3 +116,30 @@
     background: #17A2B8;
     color: #fff
   }
+  
+
+
+  .nav-item a:before {
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.6);
+  content:'';
+  position: absolute;
+  top: 50%; left: 50%;
+  width:0; height:0;
+}
+
+.nav-item a:focus:before {
+  transition: all 0.5s ease-out;
+  opacity:0;
+  width:160px;
+  height:160px;
+  margin-top:-80px;
+  margin-left:-80px;
+}
+.sn-ad-avatar-wrapper {
+  padding: 0 10px 30px 10px
+}
+.sn-ad-avatar-wrapper img{
+  max-width: 40px;
+  margin-right: 10px
+}
