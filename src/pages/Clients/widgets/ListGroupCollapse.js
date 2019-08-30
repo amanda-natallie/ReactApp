@@ -30,7 +30,6 @@ class ListGroupCollapse extends React.Component {
           <p>Data de Nascimento: {cat.dataNascimento} </p>
           <p>CPF: {cat.cpf}</p>
           <p>Renda Mensal: {cat.rendaMensal}</p>
-          
           </Collapse>
         </div>
       </ListGroupItem>
