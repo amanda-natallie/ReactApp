@@ -65,7 +65,7 @@ a:focus {
     }
 }
 
-.scroll-y {max-height:calc(100vh - 150px); overflow-y:scroll}
+.scroll-y {max-height:calc(100vh - 350px); overflow-y:scroll}
 .list-group-item:hover {cursor: pointer;}
 
 .prettybox {

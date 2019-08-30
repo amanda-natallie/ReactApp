@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import { Container } from 'reactstrap';
 import ListGroupCollapse from './widgets/ListGroupCollapse';
+import { Container, Row, Col } from "reactstrap";
 
 
 const clientes = [{
     nome: "Vanderson",
     sobrenome: "Andrade",
     email: "vanderson@email.com",
-    telefone: "997428372",
-    cep: "26011680",
+    telefone: "(99) 7428-9372",
+    cep: "26011-680",
     endereco1: "Não Informado",
     endereco2: "Não Informado",
-    dataNascimento: "23121994",
-    cpf: "12345678900",
-    rendaMensal: "88000"
+    dataNascimento: "23/12/1994",
+    cpf: "123.456.789-00",
+    rendaMensal: "R$ 880,00"
 },
 {
     nome: "Fernando",
@@ -23,8 +23,8 @@ const clientes = [{
     cep: "26001279",
     endereco1: "Rua Argentina, 89",
     endereco2: "Não Informado",
-    dataNascimento: "11091982",
-    cpf: "99850125976",
+    dataNascimento: "11/09/1982",
+    cpf: "123.456.789-00",
     rendaMensal: "150000"
 },
 {
@@ -35,8 +35,8 @@ const clientes = [{
     cep: "45900421",
     endereco1: "Rua Diamantina, 1041, SP",
     endereco2: "Rua Dr. Juliano, apt 401, SP",
-    dataNascimento: "20011995",
-    cpf: "00145699976",
+    dataNascimento: "20/01/1995",
+    cpf: "123.456.789-00",
     rendaMensal: "Não Informado"
 },
 {
@@ -47,8 +47,8 @@ const clientes = [{
     cep: "40004000",
     endereco1: "Não Informado",
     endereco2: "Não Informado",
-    dataNascimento: "12061995",
-    cpf: "90014569976",
+    dataNascimento: "12/06/1995",
+    cpf: "123.456.789-00",
     rendaMensal: "Não Informado"
 },
 {
@@ -59,8 +59,8 @@ const clientes = [{
     cep: "21277743",
     endereco1: "Não Informado",
     endereco2: "Não Informado",
-    dataNascimento: "15031997",
-    cpf: "02103405678",
+    dataNascimento: "15/03/1997",
+    cpf: "123.456.789-00",
     rendaMensal: "Não Informado"
 },
 {
@@ -71,8 +71,8 @@ const clientes = [{
     cep: "02136700",
     endereco1: "Não Informado",
     endereco2: "Não Informado",
-    dataNascimento: "07111991",
-    cpf: "05678021034",
+    dataNascimento: "07/11/1991",
+    cpf: "123.456.789-00",
     rendaMensal: "267000"
 },
 {
@@ -83,8 +83,8 @@ const clientes = [{
     cep: "02130006",
     endereco1: "Rua Maracanã, 680",
     endereco2: "Não Informado",
-    dataNascimento: "30121985",
-    cpf: "05621034780",
+    dataNascimento: "30/12/1985",
+    cpf: "123.456.789-00",
     rendaMensal: "507000"
 },
 {
@@ -95,8 +95,8 @@ const clientes = [{
     cep: "78906312",
     endereco1: "Rua Patriota, apt 202",
     endereco2: "Não Informado",
-    dataNascimento: "01051979",
-    cpf: "45665401123",
+    dataNascimento: "01/05/1979",
+    cpf: "123.456.789-00",
     rendaMensal: "365000"
 },
 {
@@ -107,8 +107,8 @@ const clientes = [{
     cep: "12323789",
     endereco1: "Não Informado",
     endereco2: "Não Informado",
-    dataNascimento: "20031997",
-    cpf: "05627801034",
+    dataNascimento: "20/03/1997",
+    cpf: "123.456.789-00",
     rendaMensal: "Não Informado"
 },
 {
@@ -119,8 +119,8 @@ const clientes = [{
     cep: "23123378",
     endereco1: "Não Informado",
     endereco2: "Não Informado",
-    dataNascimento: "10112000",
-    cpf: "05103462780",
+    dataNascimento: "10/11/2000",
+    cpf: "123.456.789-00",
     rendaMensal: "Não Informado"
 },
 {
@@ -131,8 +131,8 @@ const clientes = [{
     cep: "12337890",
     endereco1: "Não Informado",
     endereco2: "Não Informado",
-    dataNascimento: "07071990",
-    cpf: "04627805103",
+    dataNascimento: "07/07/1990",
+    cpf: "123.456.789-00",
     rendaMensal: "86000000"
 },
 {
@@ -143,8 +143,8 @@ const clientes = [{
     cep: "26120908",
     endereco1: "Rua Califórnia, 1909",
     endereco2: "Não Informado",
-    dataNascimento: "04121992",
-    cpf: "44568600289",
+    dataNascimento: "04/12/1992",
+    cpf: "123.456.789-00",
     rendaMensal: "Não Informado"
 },
 {
@@ -155,8 +155,8 @@ const clientes = [{
     cep: "26110790",
     endereco1: "Rua Professor Alberto, 29",
     endereco2: "Estrada do cantoindo, 58",
-    dataNascimento: "21102005",
-    cpf: "16221529701",
+    dataNascimento: "21/10/2005",
+    cpf: "123.456.789-00",
     rendaMensal: "68000"
 },
 {
@@ -167,8 +167,8 @@ const clientes = [{
     cep: "39788350",
     endereco1: "Rua Prefeito Muniz, 455",
     endereco2: "Não Informado",
-    dataNascimento: "22101979",
-    cpf: "52970116221",
+    dataNascimento: "22/10/1979",
+    cpf: "123.456.789-00",
     rendaMensal: "160000"
 },
 {
@@ -179,8 +179,8 @@ const clientes = [{
     cep: "23388310",
     endereco1: "Não Informado",
     endereco2: "Não Informado",
-    dataNascimento: "28101998",
-    cpf: "73312962101",
+    dataNascimento: "28/10/1998",
+    cpf: "123.456.789-00",
     rendaMensal: "Não Informado"
 },
 {
@@ -191,8 +191,8 @@ const clientes = [{
     cep: "09313399",
     endereco1: "Não Informado",
     endereco2: "Não Informado",
-    dataNascimento: "10031990",
-    cpf: "12362109731",
+    dataNascimento: "10/03/1990",
+    cpf: "123.456.789-00",
     rendaMensal: "Não Informado"
 },
 {
@@ -203,8 +203,8 @@ const clientes = [{
     cep: "45321450",
     endereco1: "Não Informado",
     endereco2: "Não Informado",
-    dataNascimento: "27062002",
-    cpf: "12973362101",
+    dataNascimento: "27/06/2002",
+    cpf: "123.456.789-00",
     rendaMensal: "Não Informado"
 },
 {
@@ -215,22 +215,43 @@ const clientes = [{
     cep: "45321450",
     endereco1: "Não Informado",
     endereco2: "Não Informado",
-    dataNascimento: "22111989",
-    cpf: "12733621019",
+    dataNascimento: "22/11/1989",
+    cpf: "123.456.789-00",
     rendaMensal: "Não Informado"
 }]
 
 export default class Clients extends Component {
-  render() {
-    return (
-        <div className="scroll-y">
-            <Container>
-                {Object.keys(clientes).map((key, index) =>
-                <ListGroupCollapse key={index} cat={clientes[key]} />
-                )}
-            </Container>
-        </div>
-      
-    );
-  }
+    render() {
+        return (
+            <>
+                <Container>
+                    <Row>
+                        <Col sm="12" md={{ size: 8, offset: 2 }}>
+                            <div className="prettybox ">
+                                <div className="text-center">
+                                    <div className="header-box">
+                                        <h4>Lista de Clientes</h4>
+                                    </div>
+                                    <div className="content-box">
+                                        <p>Aqui você pode visualizar os clientes existentes em seu painel. Clique em cada nome para ver os respectivos dados.</p>
+                                    </div>
+                                </div>
+
+                                <hr />
+                                <div className="scroll-y">
+                                    <Container>
+                                        {Object.keys(clientes).map((key, index) =>
+                                            <ListGroupCollapse key={index} cat={clientes[key]} />
+                                        )}
+                                    </Container>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </>
+
+
+        );
+    }
 }
