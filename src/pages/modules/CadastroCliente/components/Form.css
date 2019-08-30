@@ -1,0 +1,9 @@
+.form-group {
+    position: relative;
+}
+.form-group svg {
+    position: absolute;
+    right: 5px;
+    top: 42px;
+    color: #78d4e2
+}

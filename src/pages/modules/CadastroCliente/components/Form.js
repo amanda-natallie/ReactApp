@@ -1,11 +1,38 @@
 import React, { useState } from "react";
 import { Field, reduxForm } from "redux-form";
 import { Container, Row, Col, Form, FormGroup, Label } from "reactstrap";
+import { createNumberMask, createTextMask } from 'redux-form-input-masks';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faEnvelope, faPhone, faAddressCard, faAddressBook, faBirthdayCake, faMoneyCheck } from '@fortawesome/free-solid-svg-icons';
+import './Form.css';
 
 const FormCadastro = props => {
   const { handleSubmit } = props;
   const [step, setStep] = useState(0);
 
+  const currencyMask = createNumberMask({
+    prefix: 'R$ ',
+    suffix: ' por mês',
+    decimalPlaces: 2,
+    locale: 'pt-BR',
+  });
+
+  const phoneMask = createTextMask({
+    pattern: '(99) 99999-9999',
+    placeholder: '-',
+  });
+  const cepMask = createTextMask({
+    pattern: '99999-999',
+    placeholder: '-',
+  });
+  const birthdayMask = createTextMask({
+    pattern: '99/99/9999',
+    placeholder: '-',
+  });
+  const cpfMask = createTextMask({
+    pattern: '999.999.999-99',
+    placeholder: '-',
+  });
   return (
     <>
       <Container>
@@ -35,6 +62,7 @@ const FormCadastro = props => {
                           placeholder="Vinicius"
                           className="form-control padding-right"
                         />
+                        <FontAwesomeIcon icon={faUser} className="mr-2"/>
                       </FormGroup>
                     </Col>
                     <Col>
@@ -47,6 +75,7 @@ const FormCadastro = props => {
                           placeholder="Colares"
                           className="form-control"
                         />
+                        <FontAwesomeIcon icon={faUser} className="mr-2"/>
                       </FormGroup>
                     </Col>
                     <Col>
@@ -59,6 +88,7 @@ const FormCadastro = props => {
                           placeholder="talentos@viniciuscolares.com"
                           className="form-control"
                         />
+                        <FontAwesomeIcon icon={faEnvelope} className="mr-2"/>
                       </FormGroup>
                     </Col>
                     <Col>
@@ -70,7 +100,9 @@ const FormCadastro = props => {
                           type="text"
                           placeholder="(79) 9 9976 4538"
                           className="form-control padding-right"
+                          {...phoneMask}
                         />
+                        <FontAwesomeIcon icon={faPhone} className="mr-2"/>
                       </FormGroup>
                     </Col>
                   </>
@@ -86,7 +118,10 @@ const FormCadastro = props => {
                           type="text"
                           placeholder="49048-523"
                           className="form-control padding-right"
+                          {...cepMask}
                         />
+                        <FontAwesomeIcon icon={faAddressCard} className="mr-2"/>
+                        
                       </FormGroup>
                     </Col>
                     <Col>
@@ -99,6 +134,7 @@ const FormCadastro = props => {
                           placeholder="Rua dos Atleticanos, 360"
                           className="form-control"
                         />
+                        <FontAwesomeIcon icon={faAddressBook} className="mr-2"/>
                       </FormGroup>
                     </Col>
                     <Col>
@@ -111,6 +147,7 @@ const FormCadastro = props => {
                           placeholder="Milionários, Barreiro - BH/MG"
                           className="form-control"
                         />
+                        <FontAwesomeIcon icon={faAddressBook} className="mr-2"/>
                       </FormGroup>
                     </Col>
                   </>
@@ -123,10 +160,12 @@ const FormCadastro = props => {
                         <Field
                           name="birthday"
                           component="input"
-                          type="text"
+                          type="date"
                           placeholder="16/01/1992"
                           className="form-control padding-right"
+                          {...birthdayMask}
                         />
+                        <FontAwesomeIcon icon={faBirthdayCake} className="mr-2"/>
                       </FormGroup>
                     </Col>
                     <Col>
@@ -138,7 +177,10 @@ const FormCadastro = props => {
                           type="text"
                           placeholder="156.485.598-69"
                           className="form-control"
+                          {...cpfMask}
                         />
+                        <FontAwesomeIcon icon={faAddressCard} className="mr-2"/>
+                        
                       </FormGroup>
                     </Col>
                     <Col>
@@ -147,10 +189,12 @@ const FormCadastro = props => {
                         <Field
                           name="income"
                           component="input"
-                          type="email"
+                          type="text"
                           placeholder="R$ 6.000"
                           className="form-control"
+                          {...currencyMask}
                         />
+                        <FontAwesomeIcon icon={faMoneyCheck} className="mr-2"/>
                       </FormGroup>
                     </Col>
                   </>
