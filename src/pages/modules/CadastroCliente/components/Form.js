@@ -3,7 +3,7 @@ import { Field, reduxForm } from "redux-form";
 import { Container, Row, Col, Form, FormGroup, Label } from "reactstrap";
 
 const FormCadastro = props => {
-  const { handleSubmit, pristine, reset, submitting } = props;
+  const { handleSubmit } = props;
   const [step, setStep] = useState(0);
 
   return (
@@ -91,24 +91,24 @@ const FormCadastro = props => {
                     </Col>
                     <Col>
                       <FormGroup>
-                        <Label> Endereço 01:</Label>
+                        <Label> Endereço Linha 01:</Label>
                         <Field
                           name="address1"
                           component="input"
                           type="text"
-                          placeholder="Avenida suvaco da gata, n 171"
+                          placeholder="Rua dos Atleticanos, 360"
                           className="form-control"
                         />
                       </FormGroup>
                     </Col>
                     <Col>
                       <FormGroup>
-                        <Label> Endereço 02:</Label>
+                        <Label> Endereço Linha 02:</Label>
                         <Field
                           name="address2"
                           component="input"
                           type="email"
-                          placeholder="Rua baixada da cachorrinha, n 69"
+                          placeholder="Milionários, Barreiro - BH/MG"
                           className="form-control"
                         />
                       </FormGroup>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faBriefcase, faPaperPlane, faQuestion, faImage, faCopy, faPlus, faPlusSquare, faListAlt } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faPlusSquare, faListAlt } from '@fortawesome/free-solid-svg-icons';
 import './Sidebar.css';
 import { NavItem, NavbarBrand, Nav } from 'reactstrap';
 import classNames from 'classnames';
