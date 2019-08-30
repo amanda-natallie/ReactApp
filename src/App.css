@@ -42,11 +42,13 @@ a:focus {
 ----------------------------------------------------- */
 
 .content {
-    padding: 20px;
+    padding: 0;
     margin-left: 0;
     height: 100vh;
 }
-
+.container-fluid{
+    margin: 0
+}
 @media only screen and (max-width: 500px) {
     body {
         overflow: hidden;
@@ -121,4 +123,7 @@ a:focus {
 .buttonGroup {
     width: 100%;
     padding-bottom: 40px 
+}
+.mb-12 {
+margin-bottom: 80px
 }

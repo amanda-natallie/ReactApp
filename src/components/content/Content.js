@@ -9,7 +9,7 @@ import CADClient from "../../pages/Clients/cadastrar";
 import HomePage from "../../pages/Main/";
 
 export default props => (
-    <Container fluid className={classNames('content', {'is-open': props.isOpen})}>
+    <Container fluid className={classNames('content ', {'is-open': props.isOpen})}>
       <NavBar toggle={props.toggle}/>
       <Switch>
         <Redirect exact from="/" to="/home" />

@@ -229,7 +229,7 @@ export default class Clients extends Component {
                         <Col sm="12" md={{ size: 8, offset: 2 }}>
                             <div className="prettybox ">
                                 <div className="text-center">
-                                    <div className="header-box">
+                                    <div className="header-box ml-3">
                                         <h4>Lista de Clientes</h4>
                                     </div>
                                     <div className="content-box">

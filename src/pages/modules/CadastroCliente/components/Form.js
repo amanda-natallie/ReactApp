@@ -160,7 +160,7 @@ const FormCadastro = props => {
                         <Field
                           name="birthday"
                           component="input"
-                          type="date"
+                          type="text"
                           placeholder="16/01/1992"
                           className="form-control padding-right"
                           {...birthdayMask}
