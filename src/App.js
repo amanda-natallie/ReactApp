@@ -1,23 +1,39 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import SideBar from './components/sidebar/SideBar';
 import Content from './components/content/Content';
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router,withRouter } from "react-router-dom";
 
-export default () => {
+ class MainWrapper extends Component {
 
-  const [isOpen, setOpen] = useState(true)
-  const toggle = () => setOpen(!isOpen)
-
-  return (
-    <Router>
-      
-      <div className="App wrapper">
-        <SideBar toggle={toggle} isOpen={isOpen}/>
-        <Content toggle={toggle} isOpen={isOpen}/>
-      </div>
-    </Router>
-  );
+  constructor(props){
+    super(props)
+    this.state = {
+      isOpen: true,
+      clients: [],
+    }
+  }
+    toggle = () => {
+      this.setState ({
+        isOpen: !this.state.isOpen
+      })
+    }
+    getItensForm = (client,history) => {
+      console.log(this.state)
+    this.setState({clients: [...this.state.clients, client]}) 
+     history.push("/view-client")
+    }
+    render(){
+      return (
+        <Router >
+          <div className="App wrapper">
+            <SideBar toggle={this.toggle} isOpen={this.state.isOpen}/>
+            <Content toggle={this.toggle} isOpen={this.state.isOpen} submitForm={this.getItensForm} clientsList={this.state.clients}/>
+          </div>
+        </Router>
+      )
+      } 
 }
 
+export default MainWrapper

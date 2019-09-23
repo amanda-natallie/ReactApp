@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Field, reduxForm } from "redux-form";
-import { Container, Row, Col, Form, FormGroup, Label } from "reactstrap";
+import { reduxForm } from "redux-form";
+import { Container, Row, Col, Form, FormGroup, Label, Input } from "reactstrap";
 import { createNumberMask, createTextMask } from 'redux-form-input-masks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faPhone, faAddressCard, faAddressBook, faBirthdayCake, faMoneyCheck } from '@fortawesome/free-solid-svg-icons';
@@ -55,7 +55,7 @@ const FormCadastro = props => {
                     <Col>
                       <FormGroup>
                         <Label>Digite seu nome:</Label>
-                        <Field
+                        <Input
                           name="name"
                           component="input"
                           type="text"
@@ -68,7 +68,7 @@ const FormCadastro = props => {
                     <Col>
                       <FormGroup>
                         <Label> Digite seu Sobrenome:</Label>
-                        <Field
+                        <Input
                           name="lastname"
                           component="input"
                           type="text"
@@ -81,7 +81,7 @@ const FormCadastro = props => {
                     <Col>
                       <FormGroup>
                         <Label> Digite seu E-mail:</Label>
-                        <Field
+                        <Input
                           name="email"
                           component="input"
                           type="email"
@@ -94,7 +94,7 @@ const FormCadastro = props => {
                     <Col>
                       <FormGroup>
                         <Label> Digite seu Telefone:</Label>
-                        <Field
+                        <Input
                           name="telefone"
                           component="input"
                           type="text"
@@ -112,7 +112,7 @@ const FormCadastro = props => {
                     <Col>
                       <FormGroup>
                         <Label>CEP:</Label>
-                        <Field
+                        <Input
                           name="cep"
                           component="input"
                           type="text"
@@ -127,7 +127,7 @@ const FormCadastro = props => {
                     <Col>
                       <FormGroup>
                         <Label> Endereço Linha 01:</Label>
-                        <Field
+                        <Input
                           name="address1"
                           component="input"
                           type="text"
@@ -140,7 +140,7 @@ const FormCadastro = props => {
                     <Col>
                       <FormGroup>
                         <Label> Endereço Linha 02:</Label>
-                        <Field
+                        <Input
                           name="address2"
                           component="input"
                           type="email"
@@ -157,7 +157,7 @@ const FormCadastro = props => {
                     <Col>
                       <FormGroup>
                         <Label>Data de nascimento:</Label>
-                        <Field
+                        <Input
                           name="birthday"
                           component="input"
                           type="text"
@@ -171,7 +171,7 @@ const FormCadastro = props => {
                     <Col>
                       <FormGroup>
                         <Label> CPF:</Label>
-                        <Field
+                        <Input
                           name="cpf"
                           component="input"
                           type="text"
@@ -186,7 +186,7 @@ const FormCadastro = props => {
                     <Col>
                       <FormGroup>
                         <Label> Renda Mensal:</Label>
-                        <Field
+                        <Input
                           name="income"
                           component="input"
                           type="text"

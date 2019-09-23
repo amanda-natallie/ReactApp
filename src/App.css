@@ -44,7 +44,9 @@ a:focus {
 .content {
     padding: 0;
     margin-left: 0;
+    max-height: 100vh;
     height: 100vh;
+    overflow-y: auto;
 }
 .container-fluid{
     margin: 0

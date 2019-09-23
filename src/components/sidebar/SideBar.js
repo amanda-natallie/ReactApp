@@ -6,12 +6,12 @@ import { NavItem, NavbarBrand, Nav } from 'reactstrap';
 import classNames from 'classnames';
 import {Link, NavLink} from 'react-router-dom';
 
-const SideBar = props => (
-
+const SideBar = props => {
+  
+    return (
 
     <div className={classNames('sidebar', {'is-open': props.isOpen})}>
       <div className="sidebar-header">
-        <span color="info" onClick={props.toggle} style={{color: '#fff'}}>&times;</span>
         <NavbarBrand href="/">Dashboard</NavbarBrand>
       </div>
       <div className="side-menu">
@@ -28,7 +28,7 @@ const SideBar = props => (
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} to={'/add-client'} activeClassName="nav-link-active">
+            <NavLink tag={Link} to={'/view-form'} activeClassName="nav-link-active">
             <FontAwesomeIcon icon={faPlusSquare} className="mr-2"/>Cadastrar Cliente
             </NavLink>
           </NavItem>
@@ -37,10 +37,11 @@ const SideBar = props => (
               <FontAwesomeIcon icon={faListAlt} className="mr-2"/>Ver Clientes
             </NavLink>
           </NavItem>
+          
         </Nav>        
       </div>
     </div>
-  );
+)};
 
   
 
