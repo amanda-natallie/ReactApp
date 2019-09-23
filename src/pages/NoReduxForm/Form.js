@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
+import axios from 'axios';
 /*import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faPhone, faAddressCard, faAddressBook, faBirthdayCake, faMoneyCheck } from '@fortawesome/free-solid-svg-icons';*/
 import { TextField, Typography, Button, Grid } from '@material-ui/core';
@@ -54,7 +55,18 @@ class FormSemRedux extends Component {
     }
   }
 
-
+  handleCEP = () => {
+    axios.get(`https://api.pagar.me/1/zipcodes/`+ this.state.cep_pessoa)
+      .then(res => {
+        const Adress1 = res.data.street + ", " + res.data.neighborhood;
+        const Adress2 = res.data.city + "/" + res.data.state;
+        this.setState({endereco1_pessoa: Adress1, endereco2_pessoa: Adress2})
+        console.log(res.data);
+      })
+      .catch(error => {
+        console.log("este cep é inválido");
+      })
+  }
 
   setStep = (step) => {
     if (step <= 2) {
@@ -121,7 +133,7 @@ class FormSemRedux extends Component {
         fieldValidationErrors.CPF = cpfValid ? '' : ' é inválido. O cpf precisa ter 11 digitos';
         break;
       case 'renda_pessoa':
-        rendaValid = value.length != 0;
+        rendaValid = value.length !== 0;
         fieldValidationErrors.Renda = rendaValid ? '' : ' é inválido. Se não recebe nada por mês, digite "Não informado"';
         break;
       default:
@@ -159,7 +171,6 @@ class FormSemRedux extends Component {
 
 
   render() {
-    console.log(this.props)
     return (
       <>
         <Grid container justify="center" alignItems="center">
@@ -241,6 +252,7 @@ class FormSemRedux extends Component {
                     value={this.state.cep_pessoa}
                     onChange={(event) => this.handleUserInput(event)}
                     onClick={() => this.setState({ show: false })}
+                    onBlur={() => this.handleCEP()}
                     label="Digite seu CEP"
                     placeholder="30240-620"
                     type="number"
